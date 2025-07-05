@@ -21,7 +21,7 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
-							<h1>Aditya </h1>
+							<h1 class="count">no views</h1>
 							<p>A free responsive site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> / <a href="https://html5up.net">HTML5 UP</a></p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
@@ -466,6 +466,14 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const counter = document.querySelector("count");
+				async function updateCounter(){
+					let response =await fetch("https://ipjrrvd3v4vn443aktxse7yndm0ssxfq.lambda-url.ap-south-1.on.aws/");
+					let data =await response.json();
+					counter.innerHTML = `Views: ${data}`;
+				}
+			</script>
 
 	</body>
 </html>
