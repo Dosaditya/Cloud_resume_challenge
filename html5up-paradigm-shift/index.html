@@ -22,7 +22,7 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
-							<h1 id="count">Aditya</h1>
+							<h1 id="count">Adarsh</h1>
 							<p>A free responsive site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> / <a href="https://html5up.net">HTML5 UP</a></p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
@@ -461,25 +461,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 			</div>
 
 		<!-- Scripts -->
-		<script>
-			const counter = document.getElementById("count");
-			
-			async function updateCounter() {
-				try {
-					const response = await fetch("https://ipjrrvd3v4vn443aktxse7yndm0ssxfq.lambda-url.ap-south-1.on.aws/");
-					if (!response.ok) {
-						throw new Error(`HTTP error! Status: ${response.status}`);
-					}
-					const data = await response.json(); // Parse JSON response
-					counter.innerHTML = `Views: ${data.visits}`; // use "visits" from Lambda response
-				} catch (error) {
-					console.error("Error fetching visitor count:", error);
-					counter.innerHTML = "Views: Error"; // Show error on page
-				}
-			}
-			
-			//updateCounter();
-			</script>
+		
 			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
